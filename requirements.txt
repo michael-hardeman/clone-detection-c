@@ -1,0 +1,2 @@
+tree_sitter>=0.25,<0.26
+tree_sitter_c>=0.23
