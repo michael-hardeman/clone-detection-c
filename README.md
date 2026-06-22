@@ -13,16 +13,16 @@ See `docs/code-quality.md` for the design rationale.
 The bundled venv is git-ignored. Recreate it:
 
 ```
-python3 -m venv tools/clone-detector/.venv
-tools/clone-detector/.venv/bin/pip install -r tools/clone-detector/requirements.txt
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ```
 
 ## Run
 
 ```
-tools/clone-detector/clonedet ada83.c                 # ranked human report
-tools/clone-detector/clonedet --json ada83.c          # machine-readable
-tools/clone-detector/clonedet a.c b.c c.c             # cross-file clones too
+clonedet path/to/your/source.c        # ranked human report
+clonedet --json path/to/your/source.c # machine-readable
+clonedet a.c b.c c.c                  # cross-file clones too
 ```
 
 Common knobs:
